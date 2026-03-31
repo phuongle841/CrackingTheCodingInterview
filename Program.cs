@@ -13,13 +13,79 @@ public class Program
 
     public static async Task Main(string[] args)
     {
-        LongestPalidromeTest();
+        goodNodesTest();
+    }
+
+    private static void goodNodesTest()
+    {
+        goodNodes.TreeNode root= new goodNodes.TreeNode(3);
+
+        goodNodes.TreeNode two= new goodNodes.TreeNode(1);
+        goodNodes.TreeNode three= new goodNodes.TreeNode(4);
+        goodNodes.TreeNode four= new goodNodes.TreeNode(3);
+        goodNodes.TreeNode five= new goodNodes.TreeNode(1);
+        goodNodes.TreeNode six= new goodNodes.TreeNode(5);
+
+        root.left = two;
+        root.right = three;
+        two.left = four;
+        three.left = five;
+        three.right = six;
+        Console.Write(goodNodes.GoodNodes(root));
+    }
+
+    private static void MyReverseTest()
+    {
+        int testCase = 123;
+        Console.WriteLine(MyReverse.Reverse(testCase));
+
+        testCase = -123;
+        Console.WriteLine(MyReverse.Reverse(testCase));
+
+        testCase = 120;
+        Console.WriteLine(MyReverse.Reverse(testCase));
+    }
+
+    private static void coinChangeTest()
+    {
+        int[] coins = [1, 2, 5];
+        int amount = 11;
+        Console.WriteLine(coinChange.CoinChange(coins, amount));
+        coins = [2];
+        amount = 3;
+        Console.WriteLine(coinChange.CoinChange(coins, amount));
+        coins = [1];
+        amount = 0;
+        Console.WriteLine(coinChange.CoinChange(coins, amount));
+    }
+
+    private static void ClimbStairsTest()
+    {
+        int n = 2;
+        Console.WriteLine(climbStairs.ClimbStairs(n));
+        n = 3;
+        Console.WriteLine(climbStairs.ClimbStairs(n));
+    }
+
+    static void RobTest()
+    {
+        int[] nums = [1, 2, 3, 1];
+        Console.WriteLine(rob.Rob(nums));
+        nums = [2, 7, 9, 3, 1];
+        Console.WriteLine(rob.Rob(nums));
+    }
+
+    static void ChangeTest()
+    {
+        int amount = 5;
+        int[] coins = [1, 2, 5];
+        Console.WriteLine(change.Change(amount, coins));
     }
 
     static void LongestPalidromeTest()
     {
         string testCase = "baba";
-        Console.WriteLine("Longest Palindrome of \"{0}\" is: {1}",testCase,longestPalindrome.LongestPalindrome(testCase));
+        Console.WriteLine("Longest Palindrome of \"{0}\" is: {1}", testCase, longestPalindrome.LongestPalindrome(testCase));
     }
 
     public static void FindMedianSortedArraysTest()

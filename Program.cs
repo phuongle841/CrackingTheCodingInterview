@@ -13,18 +13,39 @@ public class Program
 
     public static async Task Main(string[] args)
     {
-        goodNodesTest();
+        OrangesRottingTest();
+    }
+
+    private static void OrangesRottingTest()
+    {
+        int[,] grid = new int[3, 3] {
+            { 2, 1, 1 },
+            { 1, 1, 0 },
+            { 0, 1, 1 },
+        };
+        Console.WriteLine(orangesRotting.OrangesRotting(grid));
+    }
+
+    private static void MaxAreaTest()
+    {
+        int[] height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+        Console.WriteLine(maxArea.MaxArea(height));
+        height = [1, 1];
+        Console.WriteLine(maxArea.MaxArea(height));
+        height = [8, 7, 2, 1];
+        Console.WriteLine(maxArea.MaxArea(height));
+
     }
 
     private static void goodNodesTest()
     {
-        goodNodes.TreeNode root= new goodNodes.TreeNode(3);
+        goodNodes.TreeNode root = new goodNodes.TreeNode(3);
 
-        goodNodes.TreeNode two= new goodNodes.TreeNode(1);
-        goodNodes.TreeNode three= new goodNodes.TreeNode(4);
-        goodNodes.TreeNode four= new goodNodes.TreeNode(3);
-        goodNodes.TreeNode five= new goodNodes.TreeNode(1);
-        goodNodes.TreeNode six= new goodNodes.TreeNode(5);
+        goodNodes.TreeNode two = new goodNodes.TreeNode(1);
+        goodNodes.TreeNode three = new goodNodes.TreeNode(4);
+        goodNodes.TreeNode four = new goodNodes.TreeNode(3);
+        goodNodes.TreeNode five = new goodNodes.TreeNode(1);
+        goodNodes.TreeNode six = new goodNodes.TreeNode(5);
 
         root.left = two;
         root.right = three;

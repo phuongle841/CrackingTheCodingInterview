@@ -7,21 +7,20 @@ namespace CrackingTheCodingInterview.LeetCode150
     {
         public static int[] TwoSum(int[] nums, int target)
         {
-            Dictionary<int, int> dic = new Dictionary<int, int>();
-            int curr = 0;
+
+            Dictionary<int, int> dic = new();
 
             for (int i = 0; i < nums.Length; i++)
             {
-
-                curr = target - nums[i];
-                if (dic.ContainsKey(curr))
+                int complement = target - nums[i];
+                if (dic.ContainsKey(complement))
                 {
-                    return new int[] { dic[curr], i };
+                    return [dic[complement], i];
                 }
                 dic[nums[i]] = i;
             }
 
-            return new int[0];
+            return [];
         }
     }
 }

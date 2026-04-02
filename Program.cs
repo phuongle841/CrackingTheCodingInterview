@@ -13,7 +13,40 @@ public class Program
 
     public static async Task Main(string[] args)
     {
-        OrangesRottingTest();
+        MaxProfitTest();
+    }
+
+    private static void MaxProfitTest()
+    {
+        int[] prices = [7, 1, 5, 3, 6, 4];
+        Console.WriteLine(maxProfit.MaxProfit(prices));
+    }
+
+    private static void TwoSumTest()
+    {
+        int[] nums = [2, 7, 11, 15];
+        int target = 9;
+        int[] result = twoSum.TwoSum(nums, target);
+        for (int i = 0; i < result.Length; i++)
+        {
+            Console.WriteLine(result[i]);
+        }
+
+        nums = [3, 2, 4];
+        target = 6;
+        result = twoSum.TwoSum(nums, target);
+        for (int i = 0; i < result.Length; i++)
+        {
+            Console.WriteLine(result[i]);
+        }
+
+        nums = [3, 3];
+        target = 6;
+        result = twoSum.TwoSum(nums, target);
+        for (int i = 0; i < result.Length; i++)
+        {
+            Console.WriteLine(result[i]);
+        }
     }
 
     private static void OrangesRottingTest()

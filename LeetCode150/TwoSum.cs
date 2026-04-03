@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CrackingTheCodingInterview.LeetCode150
+﻿namespace CrackingTheCodingInterview.LeetCode150
 {
     public class twoSum
     {

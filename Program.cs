@@ -1,11 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
-
 using CrackingTheCodingInterview.LeetCode150;
-using Microsoft.VisualBasic.FileIO;
 using static CrackingTheCodingInterview.LeetCode150.addTwoNumbers;
-using static System.Net.Mime.MediaTypeNames;
 
 public class Program
 {
@@ -13,7 +9,103 @@ public class Program
 
     public static async Task Main(string[] args)
     {
-        MaxProfitTest();
+        ThreeSumTest();
+    }
+
+    private static void ThreeSumTest()
+    {
+        int[] nums = [-1, 0, 1, 2, -1, -4];
+        IList<IList<int>> result = threeSum.ThreeSum(nums);
+        for (int i = 0; i < result.Count; i++)
+        {
+            for (int j = 0; j < result[0].Count; j++)
+            {
+                Console.WriteLine(result[i][j]);
+            }
+        }
+    }
+
+    private static void TwoSumIITest()
+    {
+        int[] numbers = [2, 7, 11, 15];
+        int target = 9;
+        int[] result = twoSumII.TwoSum(numbers, target);
+        Console.WriteLine("{0}", string.Join(", ", result));
+
+        numbers = [2, 3, 4]; target = 6;
+        result = twoSumII.TwoSum(numbers, target);
+        Console.WriteLine("{0}", string.Join(", ", result));
+
+        numbers = [-1, 0]; target = -1;
+        result = twoSumII.TwoSum(numbers, target);
+        Console.WriteLine("{0}", string.Join(", ", result));
+
+    }
+
+    private static void SearchTest()
+    {
+        int[] nums = [-1, 0, 3, 5, 9, 12];
+        int target = 9;
+        Console.WriteLine(search.Search(nums, target));
+
+        nums = [-1, 0, 3, 5, 9, 12]; target = 2;
+        Console.WriteLine(search.Search(nums, target));
+
+    }
+
+    private static void FindMinTest()
+    {
+        int[] nums = [3, 4, 5, 1, 2];
+        Console.WriteLine(findMin.FindMin(nums));
+
+        nums = [4, 5, 6, 7, 0, 1, 2];
+        Console.WriteLine(findMin.FindMin(nums));
+
+        nums = [11, 13, 15, 17];
+        Console.WriteLine(findMin.FindMin(nums));
+    }
+
+    private static void MaxProductTest()
+    {
+        int[] nums = [2, 3, -2, 4];
+        Console.WriteLine(maxProduct.MaxProduct(nums));
+
+        nums = [-2, 0, -1];
+        Console.WriteLine(maxProduct.MaxProduct(nums));
+
+    }
+
+    private static void MaxSubArrayTest()
+    {
+        int[] nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+        Console.WriteLine(maxSubArray.MaxSubArray(nums));
+
+        nums = [1];
+        Console.WriteLine(maxSubArray.MaxSubArray(nums));
+
+        nums = [5, 4, -1, 7, 8];
+        Console.WriteLine(maxSubArray.MaxSubArray(nums));
+    }
+
+    private static void ProductExceptSelfTest()
+    {
+        int[] nums = [1, 2, 3, 4];
+        Console.WriteLine("{0}", string.Join(", ", productExceptSelf.ProductExceptSelf(nums)));
+
+        nums = [-1, 1, 0, -3, 3];
+        Console.WriteLine("{0}", string.Join(", ", productExceptSelf.ProductExceptSelf(nums)));
+    }
+
+    private static void ConaintsDuplicateTest()
+    {
+        int[] nums = [1, 2, 3, 1];
+        Console.WriteLine(containsDuplicate.ContainsDuplicate(nums));
+
+        nums = [1, 2, 3, 4];
+        Console.WriteLine(containsDuplicate.ContainsDuplicate(nums));
+
+        nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
+        Console.WriteLine(containsDuplicate.ContainsDuplicate(nums));
     }
 
     private static void MaxProfitTest()
